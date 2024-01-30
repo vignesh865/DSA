@@ -13,12 +13,17 @@ class Solution:
 
         for num in nums:
 
-            freq[num] = freq.get(num, 0) - 1
+            freq[num] = freq.get(num, 0) + 1
 
         h = []
 
-        for i in freq.items():
-            heapq.heappush(h, (i[1], i[0]))
-        return [heapq.heappop(h)[1] for _ in range(k)]
+        # for i in freq.items():
+        #     heapq.heappush(h, (i[1], i[0]))
+        # return [heapq.heappop(h)[1] for _ in range(k)]
 
+        # k_largest = heapq.nlargest(k, freq,  key = lambda item: item[1])
+        k_largest = heapq.nlargest(k, freq,  key = freq.get)
+
+        # print(k_largest)
+        return k_largest
         
