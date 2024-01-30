@@ -10,17 +10,6 @@ class Solution:
         sum_array.insert(0, sum)
         return sum
 
-    # def reverse_sum(self, nums, i, sum_array):
-
-    #     if i == 0:
-    #         sum_array.append(1)
-    #         return 1
-        
-    #     sum = self.reverse_sum(nums, i-1, sum_array)* nums[i-1]
-    #     sum_array.append(sum)
-    #     return sum
-
-
     def reverse_sum(self, nums, i, sum_array):
 
         if i == 0:
