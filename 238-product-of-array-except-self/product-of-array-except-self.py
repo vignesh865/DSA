@@ -33,22 +33,9 @@ class Solution:
 
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 
-        # forward_sum = [1]
-        # i = 1
-        # while i < len(nums):
-        #     forward_sum.append(forward_sum[i-1]*nums[i])
-        #     i+=1
-
-        # reverse_sum = [1]
-        # i = len(nums)-2
-        # while i > 0:
-        #     reverse_sum.insert(reverse_sum[0]*nums[i], 0)
-        #     i-=1
-
         forward_sum_arr = []
         self.forward_sum(nums, 0, forward_sum_arr)
         reverese_sum_arr = []
         self.reverse_sum(nums, len(nums)-1, forward_sum_arr)
-        print(forward_sum_arr, reverese_sum_arr)
 
         return forward_sum_arr
